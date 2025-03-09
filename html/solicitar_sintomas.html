@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Atendimento</title>
+    <link rel="stylesheet" href="/css/styles_solicitar_sintomas.css">
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+</head>
+<body>
+    <!-- importaçao do header -->
+    <div id="header"></div>
+    <div class="container">
+        <div class="titulo">
+            <img src="/assets/medical-record.png" alt="medical-record" class="titulo-img">
+            <h2>Solicitar Atendimento</h2>
+        </div>
+
+        <form action="solicitar_envio.html">
+            <label class="subtitulo">Selecione seus sintomas</label>
+            <span id="diff">Escolha no mínimo 1</span>
+
+            <div class="sintomas">
+                <button type="button" class="btn-sintoma">Dor de cabeça</button>
+                <button type="button" class="btn-sintoma">Enjoo/náusea</button>
+                <button type="button" class="btn-sintoma">Garganta inflamada</button>
+                <button type="button" class="btn-sintoma">Cólica</button>
+                <button type="button" class="btn-sintoma">Câimbra</button>
+                <button type="button" class="btn-sintoma">Dor no corpo</button>
+                <button type="button" class="btn-sintoma">Febre</button>
+                <button type="button" class="btn-sintoma">Tontura</button>
+                <button type="button" class="btn-sintoma">Dor de barriga</button>
+                <button type="button" class="btn-sintoma">Outros sintomas</button>
+            </div>
+
+            <div class="form-section">
+                <section>
+                    <label for="data-sintoma" id="texto_quest">Quando o(s) sintoma(s) começaram?</label>
+                    <input type="date" id="data-sintoma" name="data-sintoma" required>
+                </section>
+
+                <section>
+                    <label for="info" id="texto_quest">Informações adicionais</label>
+                    <input type="text" id="info" name="info" placeholder="Escreva mais detalhes">
+                </section>
+            </div>
+
+            <div class="form-buttons-sol">
+                <input class="voltar" type="button" onclick="window.location.href='solicitar.html'" value="Voltar">
+                <input class="submit" type="submit" id="enviar" value="Enviar" disabled>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const botoes = document.querySelectorAll('.btn-sintoma');
+        const botaoEnviar = document.getElementById('enviar');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                botao.classList.toggle('selecionado');
+                verificarSelecao();
+            });
+        });
+
+        function verificarSelecao() {
+            const selecionados = document.querySelectorAll('.btn-sintoma.selecionado');
+            if (selecionados.length > 0) {
+                botaoEnviar.removeAttribute('disabled');
+            } else {
+                botaoEnviar.setAttribute('disabled', 'disabled');
+            }
+        }
+    </script>
+     <script src="/header_script.js"></script>
+</body>
+</html>

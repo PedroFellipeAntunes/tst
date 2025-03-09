@@ -1,0 +1,136 @@
+/* Variáveis globais */
+:root {
+    --primary-color: #0065FF;
+    --text-color: #112950;
+    --input-color: #B2BA6C;
+    --border-color: #ccc;
+    --bg-color: #ffffff;
+    --font-family: "Inter", sans-serif;
+    --font-size-title: 40px;
+    --font-size-subtitle: 14px;
+    --font-size-label: 15px;
+    --font-size-input: 15px;
+    --font-size-button: 17px;
+    --padding-input: 10px;
+    --padding-button: 15px;
+    --border-radius: 12px;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Centralizando a página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+/* Estilização da logo e títulos */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-name {
+    width: 186px;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: var(--font-size-title);
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: var(--font-size-subtitle);
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* Estilização do formulário */
+.login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-box section {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    text-align: left;
+    font-size: var(--font-size-label);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: var(--padding-input);
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: var(--font-size-input);
+    font-weight: normal;
+    color: var(--input-color);
+}
+
+/* Botão */
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: var(--font-size-button);
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease;
+    text-wrap: nowrap;
+    padding: var(--padding-button);
+    padding-inline: 5em;
+    border: 2px solid var(--primary-color);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}

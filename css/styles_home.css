@@ -1,0 +1,91 @@
+/* Variáveis globais */
+:root {
+    --primary-color: #0065FF;
+    --hover-color: #0056b3;
+    --text-color: #112950;
+    --input-color: #B2BA6C;
+    --border-color: #ccc;
+    --bg-color: #ffffff;
+    --font-family: "Inter", sans-serif;
+    --font-size-title: 40px;
+    --font-size-subtitle: 14px;
+    --font-size-label: 15px;
+    --font-size-input: 15px;
+    --font-size-button: 17px;
+    --padding-input: 10px;
+    --padding-button: 15px;
+    --border-radius: 12px;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+
+/* Corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: var(--background-color);
+}
+
+/* Container central */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 20px;
+}
+
+/* Botões da Home */
+.home-btn {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease;
+    width: 100%;
+    text-wrap: nowrap;
+    padding: var(--padding-button);
+    padding-inline: 5em;
+    border: 2px solid var(--primary-color);
+}
+
+.home-btn:hover {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        /* height: auto; */
+        flex-grow: 1;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .home-btn {
+        padding-inline: 0;
+    }
+}
+
+/* Foco em deixar o Perfil a baixo da logo Sus */
+@media screen and (max-width: 768px) {
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMA - Solicitação</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <link rel="stylesheet" href="/css/styles_solicitar.css">
+</head>
+<body>
+    <!-- Importação do Header -->
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="titulo">
+            <img src="/assets/medical-record.png" alt="medical-record">
+            <h2>Solicitar Atendimento</h2>
+        </div>
+
+        <form action="solicitar_sintomas.html">
+            <div class="form-section">
+                <section>
+                    <label for="nome">Nome do Aluno</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </section>
+    
+                <section>
+                    <label for="data">Data de Nascimento</label>
+                    <input type="date" id="data" name="data" required>
+                </section>
+            </div>
+
+            <div class="form-section">
+                <section>
+                    <label for="id">Matricula do Aluno</label>
+                    <input type="text" id="id" name="id" placeholder="Digite sua matricula" required>
+                </section>
+    
+                <section>
+                    <label for="curso">Curso</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione seu curso</option>
+                        <option value="curso1">Curso 1</option>
+                        <option value="curso2">Curso 2</option>
+                        <option value="curso3">Curso 3</option>
+                        <!-- Adicione mais cursos conforme necessário -->
+                    </select>
+                </section>                
+
+                <section>
+                    <label for="turma">Turma</label>
+                    <select id="turma" name="turma" required>
+                        <option value="">Selecione sua turma</option>
+                        <option value="turma1">Turma 1</option>
+                        <option value="turma2">Turma 2</option>
+                        <option value="turma3">Turma 3</option>
+                        <!-- Adicione mais turmas conforme necessário -->
+                    </select>
+                </section>                
+            </div>
+
+            <div class="form-section">
+                <section>
+                    <label for="nome-resp">Responsável</label>
+                    <input type="text" id="nome-resp" name="nome-resp" placeholder="Digite o nome do seu responsável" required>
+                </section>
+    
+                <section>
+                    <label for="contato-resp">Contato do Responsável</label>
+                    <input type="tel" id="contato-resp" name="contato-resp" placeholder="(XX) X XXXX-XXXX" 
+                           pattern="\([0-9]{2}\) [0-9]{1} [0-9]{4}-[0-9]{4}" required>
+                </section>
+            </div>
+            
+            <div class="form-buttons-sol">
+                <input type="button" onclick="window.location.href='home.html'" value="Voltar">
+                <input type="submit" value="Continuar">
+            </div>
+        </form>
+    </div>
+
+    <!-- Referência ao script externo -->
+    <script src="/header_script.js"></script>
+</body>
+</html>
